@@ -15,7 +15,6 @@ public class ElectronicWatch {
         String m = minutes + "";
         String ls = leftSeconds + "";
 
-
         if (hours < 24) {
             System.out.println(h + ":" + ("00" + m).substring(m.length()) + ":" + ("00" + ls).substring(ls.length()));
         } else {
