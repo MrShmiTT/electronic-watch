@@ -1,7 +1,6 @@
 package com.epam.rd.autotasks.meetautocode;
 
 import java.util.Scanner;
-import java.lang.String;
 
 public class ElectronicWatch {
     public static void main(String[] args) {
@@ -16,9 +15,12 @@ public class ElectronicWatch {
         String m = minutes + "";
         String ls = leftSeconds + "";
 
-//        String str = String.format("%tI:%tM:%tS", hours, minutes, leftSeconds);
 
-//        System.out.printf("%d:%0d:%0d", hours, minutes, leftSeconds);
-        System.out.println(("0" + h).substring(h.length()) + ":" + ("00" + m).substring(m.length()) + ":" + ("00" + ls).substring(ls.length()));
+        if (hours < 24) {
+            System.out.println(h + ":" + ("00" + m).substring(m.length()) + ":" + ("00" + ls).substring(ls.length()));
+        } else {
+            System.out.println(0 + ":" + ("00" + m).substring(m.length()) + ":" + ("00" + ls).substring(ls.length()));
+
+        }
     }
 }
